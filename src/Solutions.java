@@ -51,6 +51,6 @@ public class Solutions {
             tmp = tmp.next;
         }
 
-
+        return null;
     }
 }
