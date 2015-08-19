@@ -42,12 +42,18 @@ public class Solutions {
         if(head == null){
             return null;
         }
-        ArrayList<RandomListNode> list = new ArrayList<RandomListNode>();
         HashMap<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
         RandomListNode tmp = head;
+        RandomListNode dummy = new RandomListNode(0);
+        dummy.next = head;
         while(tmp !=null){
-            list.add(tmp);
             map.put(tmp, new RandomListNode(tmp.label));
+            if(tmp.next != null){
+                map.get(tmp).next = new RandomListNode(tmp.next.label);
+            }
+            if(tmp.random != null){
+                map.get(tmp).random
+            }
             tmp = tmp.next;
         }
 
